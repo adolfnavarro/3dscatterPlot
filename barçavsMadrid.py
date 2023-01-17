@@ -23,7 +23,6 @@ ysMadrid=[37,16,55,50,59,89,15,164,66,44,1,58,20,67,7,-65,51,225,-39,-44]  # Mad
 
 listaEtiquetasTemporada =["02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21"]
 
-
 # Plot
 fig, ax = plt.subplots(subplot_kw={"projection": "3d"},figsize=(10,7) )
 
@@ -35,11 +34,14 @@ ax.scatter(xs, ysBarça, zsBarça, c="r", marker="o", s=300, alpha=.7, label="Ba
 # ax.set(xticklabels=[],
 #        yticklabels=[],
 #        zticklabels=[])
-ax.set_xticks(xs,listaEtiquetasTemporada)
-ax.set_yticks([-100,-75,-50,-25,0,25,50,75,100,125,150,175,200,225],[-100,-75,-50,-25,0,25,50,75,100,125,150,175,200,225])
-ax.set_zticks([0,1,2,3],["0","1","2","3"])
 
 
+# Rango datos en los ejes y dato visualizado
+ax.set_xticks(xs,listaEtiquetasTemporada)                                                                                   # Temporada
+ax.set_yticks([-100,-75,-50,-25,0,25,50,75,100,125,150,175,200,225],[-100,-75,-50,-25,0,25,50,75,100,125,150,175,200,225])  # Balance
+ax.set_zticks([0,1,2,3],["0","1","2","3"])                                                                                  # Titulos 
+
+# Etiquetas de los ejes
 ax.set_xlabel ("temporada")
 ax.set_ylabel ("gastos")
 ax.set_zlabel ("titulos")
